@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './_styles/index.css'
 import Layout from './_layout/layout'
-import screen1 from './_assets/screenshot1-2x.png'
-import screen2 from './_assets/screenshot2-2x.png'
-import screen3 from './_assets/screenshot3-2x.png'
-import screen4 from './_assets/screenshot4-2x.png'
+import screen1 from './-assets/screenshot1-2x.png'
+import screen2 from './-assets/screenshot2-2x.png'
+import screen3 from './-assets/screenshot3-2x.png'
+import screen4 from './-assets/screenshot4-2x.png'
 import ImgRotator from './_hooks/useImage'
-import appStore from './_assets/appStore.png'
-import googlePlay from './_assets/googlePlay.png'
+import appStore from './-assets/appStore.png'
+import googlePlay from './-assets/googlePlay.png'
+import { FirebaseAuthProvider } from './_firebase/firebaseAuthContext'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 
@@ -29,7 +30,7 @@ const HomePage = () => {
           <div className=' max-w-[350px] flex flex-col justify-center mt-3'>
             <div className='border-2 border-gray-300  text-center mb-3 py-3'>
               <div className=' mt-9 mb-3'>
-                <div className=' bg-[url("./_assets/ATdtiLb2BQ9.png")] bg-no-repeat bg-[length:176px_181px] dark:bg-[center_-3.25rem] h-[51px] w-[175px] mx-auto'></div>
+                <div className={`bg-[url('/ATdtiLb2BQ9.png')] bg-no-repeat bg-[length:176px_181px] dark:bg-[center_-3.25rem] h-[51px] w-[175px] mx-auto`} ></div>
               </div>
               {login ? 
               <div className='flex flex-col w-[350px]'>
@@ -96,9 +97,11 @@ const HomePage = () => {
 }
 root.render(
     <React.StrictMode>
+      <FirebaseAuthProvider>
       <Layout >
         <HomePage />
       </Layout>
+      </FirebaseAuthProvider>
     </React.StrictMode>,
   )
 
