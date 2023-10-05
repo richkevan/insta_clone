@@ -1,0 +1,1 @@
+import{c as r,j as e,R as s,F as t,L as o}from"./layout-e100e63a.js";r.createRoot(document.getElementById("root")).render(e.jsx(s.StrictMode,{children:e.jsx(t,{children:e.jsxs(o,{children:[e.jsx("a",{href:"/tiktok_clone/",children:"Home"}),e.jsx("h1",{children:"Messages Page"})]})})}));
