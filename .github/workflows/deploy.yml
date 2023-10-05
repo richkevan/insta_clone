@@ -22,7 +22,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        with:
+        env:
           VITE_APIKEY: '${{ secrets.VITE_APIKEY }}'
           VITE_AUTHDOMAIN: '${{ secrets.VITE_AUTHDOMAIN }}'
           VITE_PROJECTID: '${{ secrets.VITE_PROJECTID }}'
