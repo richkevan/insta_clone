@@ -36,16 +36,14 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-        with:
-          enviroment:
-            environment:
-            VITE_APIKEY: ${{ VITE_APIKEY}},
-            VITE_AUTHDOMAIN: ${{ VITE_AUTHDOMAIN }},
-            VITE_PROJECTID: ${{ VITE_PROJECTID }},
-            VITE_STORAGEBUCKET: ${{ VITE_STORAGEBUCKET }},
-            VITE_MESSAGINGSENDERID: ${{ VITE_MESSAGINGSENDERID }},
-            VITE_APPID: ${{ VITE_APPID }},
-            VITE_MEASUREMENTID: ${{ VITE_MEASUREMENTID }},
+        env:
+          VITE_APIKEY: '${{ VITE_APIKEY}}'
+          VITE_AUTHDOMAIN: '${{ VITE_AUTHDOMAIN }}'
+          VITE_PROJECTID: '${{ VITE_PROJECTID }}'
+          VITE_STORAGEBUCKET: '${{ VITE_STORAGEBUCKET }}'
+          VITE_MESSAGINGSENDERID: '${{ VITE_MESSAGINGSENDERID }}'
+          VITE_APPID: '${{ VITE_APPID }}'
+          VITE_MEASUREMENTID: '${{ VITE_MEASUREMENTID }}'
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
