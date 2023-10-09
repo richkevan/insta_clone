@@ -45,7 +45,9 @@ const HomePage = () => {
                     account_circle
                     </span>
                     <p className='pl-3 grid place-content-center'>demo@richkevan.com</p>
-                    <button className=' w-[72.5px] h-[32px] ml-auto bg-blue-500 text-white px-2 rounded-md'>Log in</button>
+                    <button 
+                    className=' w-[72.5px] h-[32px] ml-auto bg-blue-500 text-white px-2 rounded-md'
+                    onClick={() => {console.log("Logged In")}}>Log in</button>
                   </div>
                   </div>
                   <div className='h-8 flex mt-3'></div>
